@@ -13,13 +13,16 @@
 
 
 
-<h1>Details of One Schol Object</h1>
+<h1>Details of One School Object</h1>
 
 
 {% for i in sclobject.students.all %}
 <h4>{{i.sname}}</h4>
 <h4>{{i.sage}}</h4>
 {% endfor %}
+
+<a href="{% url 'Update' sclobject.pk %}" class="btn btn-danger">Update Your Form</a>
+<a href="{% url 'Delete' sclobject.pk %}" class="btn btn-secondary">Delete Your Form</a>
 
 
 {% endblock %}
