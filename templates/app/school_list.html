@@ -8,9 +8,9 @@
 
 {% block body-block %}
 
-    {% for school in schools %}
+    {% for i in schools %}
 
-    <h1>{{school.school_name}}</h1>
+    <a href="{{i.pk}}"><h1>{{i.school_name}}</h1></a>
 
     {% endfor %}
 

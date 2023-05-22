@@ -1,0 +1,16 @@
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+    <title>Data Insertion Page</title>
+{% endblock %}
+
+{% block body-block %}
+<form  method="POST">
+    {% csrf_token %}
+
+
+    {{form.as_p}}
+    
+    <input type="submit" value="Data Inserted">
+</form>
+{% endblock %}
